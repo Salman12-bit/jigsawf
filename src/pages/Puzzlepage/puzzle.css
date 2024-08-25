@@ -1,0 +1,180 @@
+.upper-container{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzlecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card2{
+    padding-top: 100%; 
+    position: relative;
+    background-color: #b8c5c3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.1s;
+}
+
+.card2.matched {
+    background-color: #4caf50;
+    cursor: default;
+}
+
+.card2.flipped {
+    background-color: #a72b2b;
+    color: #000;
+    cursor: default;
+    transform: rotateY(180deg);
+}
+
+.card2 > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #004d40;
+}
+
+
+.puzzleimg1{
+    background-color: white;
+    border-radius: 30px;
+    margin-top:10px;   
+
+}
+.puzzle-game-intro{
+    text-align: justify;
+    margin-inline-start: 30px;
+    font-size: large;
+    font-weight: 400;
+}
+.second{
+    border-radius:30px;
+    background-color: #b88080;
+}
+.second:hover{
+    background-color: #6b7e7b;
+}
+
+.img{
+    background: linear-gradient(45deg, #b66e6e, #415b83, #528e54, #3498db);
+    border-radius: 30px;
+    width:340px;
+    height: 400px;
+    align-content: center;
+}
+
+.info {
+    color: white;
+    margin-top: 3px;
+}
+
+.btn {
+    color: white;
+    border-radius: 5px;
+    margin-left: 70px;
+    
+}
+
+.level {
+    margin: 5px 0px;
+}
+
+.des {
+    color: white;
+    font-size: larger;
+    font-style: italic;
+}
+.puzzleimg{
+    background-color: white;
+    border-radius: 30px;
+    height: 150px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.top2{
+    margin-top: 70px;
+    margin-left: 25px;
+}
+
+.box{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.button1{
+    margin-left: 10px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main{
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.inner{
+    margin-top: 20px;
+    background: linear-gradient(45deg, #a43535, #295ba4, #7dc87f, rgb(57, 52, 219));
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.innerimg{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-block-end: 20px;
+    border-radius: 30px;
+    height: 180px;
+    width: 250px;
+}
+.img2{
+    background: linear-gradient(45deg, #b66e6e, #415b83, #528e54, #3498db);
+    border-radius: 30px;
+    width:340px;
+    height: 480px;
+    align-content: center;
+}
+.video{
+border-radius: 30px;
+}
+.red{
+    color: red;
+    font-size:30px;
+    font-style: italic;
+}

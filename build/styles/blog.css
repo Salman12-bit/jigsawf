@@ -1,0 +1,16 @@
+.step{
+    text-align: justify;
+    margin-inline-start: 30px;
+}
+.up{
+    text-align: justify;
+    margin-inline-start: 20px;
+} 
+.mar{
+    text-align: justify;
+    margin-inline-start: 70px;
+}
+.first{
+   background-color: rgb(227, 239, 235);
+   padding: 25px;
+}

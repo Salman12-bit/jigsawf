@@ -1,0 +1,19 @@
+.navbar-brand {
+    margin-left: 30px !important;
+    color: black !important;
+    font-size: x-large !important;
+    font-weight: 50px !important;
+    font-style: italic !important;
+}
+
+.navbar{
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 20 !important;
+} 
+
+.nav-link{
+    font-size: larger;
+    font-weight: bold;
+    font-style: normal;
+}

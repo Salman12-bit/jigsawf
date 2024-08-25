@@ -1,0 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /checkout
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Disallow: /
+
+
+Sitemap: https://jigsawplanet.online/sitemap.xml

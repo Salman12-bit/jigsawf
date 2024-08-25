@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+.navbar{
+  background: linear-gradient(90deg, #b66e6e, #415b83, #528e54, #3498db);
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.card:hover{
+  box-shadow: 8px 7px 8px gray;
+  scale: 1.1;
+  transition: 0.5s ease-in-out;
+}

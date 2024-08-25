@@ -1,0 +1,69 @@
+.welcome {
+    background: linear-gradient(45deg, #b66e6e, #415b83, #528e54, #3498db);
+    height: 300px;
+    width: 1050px !important;
+    margin-left: 50px;
+    border-radius: 40px;
+    margin-top: 10px;
+}
+
+.img3 {
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    border-radius: 20px;
+
+}
+
+.postion {
+    position: absolute;
+    width: 70%;
+}
+
+.tex{
+    margin-top: 60px;
+    font-style: italic;
+    font-size: 160%;
+    margin-left: 100px;
+}
+
+.form-control1{
+    width: 1000px; 
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: x-large;
+    border-radius: 15px;
+}
+
+.dasharea {
+    background: linear-gradient(45deg, #bb2d2d, #415b83, #528e7a, #3498db);
+    margin: 20px 0px;
+    border-radius: 20px;
+    width: 1050px;
+    margin-left: 50px;
+}
+
+.tit {
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+.hand {
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.summ {
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.fil {
+    height: 30px !important;
+    margin-top: 20px;
+    margin-left: 30px;
+    height: 30px;
+}
