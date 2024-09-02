@@ -29,7 +29,7 @@ const Home = () => {
             return;
         }
 
-        let comresult = await fetch("https://www.api.jigsawplanet.us/usercomment", {
+        let comresult = await fetch("https://www.api.jigsawplanet.online/usercomment", {
             method: "post",
             body: JSON.stringify({ comment, rating }),
             headers: {
