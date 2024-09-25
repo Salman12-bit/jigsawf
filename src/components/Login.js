@@ -11,11 +11,11 @@ const Login = () => {
 
     const validateForm = () => {
         if (!email) {
-            toast.error("Email is required");
+            toast.error("Email is required", { className: 'toast-custom' });
             return false;
         }
         if (!password) {
-            toast.error("Name is required");
+            toast.error("Name is required", { className: 'toast-custom' });
             return false;
         }
         
@@ -42,9 +42,9 @@ const Login = () => {
         if (result.ok) {
             localStorage.setItem('key', JSON.stringify(data.user));
             navigate("/");
-            toast.success("User Login Successfully..!!");
+            toast.success("User Login Successfully..!!", { className: 'toast-custom' });
         } else {
-            toast.error("User Email or Password do not match..!!");
+            toast.error("User Email or Password do not match..!!", { className: 'toast-custom' });
             }
         }
 

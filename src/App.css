@@ -1,10 +1,6 @@
 .App {
   text-align: center;
 }
-.navbar{
-  background: linear-gradient(90deg, #b66e6e, #415b83, #528e54, #3498db);
-
-}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +10,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #030303;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -12,11 +12,11 @@ const Home = () => {
 
     const validateForm = () => {
         if (!comment) {
-            toast.error("Please Write Your Comment");
+            toast.error("Please Write Your Comment", { className: 'toast-custom' });
             return false;
         }
         if (rating === 0) {
-            toast.error("Please Select a Rating");
+            toast.error("Please Select a Rating", { className: 'toast-custom' });
             return false;
         }
         return true;
@@ -40,7 +40,7 @@ const Home = () => {
         const commentdata = await comresult.json();
 
         if (commentdata) {
-            toast.success("Thank You For Your Valuable Comment..:)");
+            toast.success("Thank You For Your Valuable Comment..:)", { className: 'toast-custom' });
             setComment("");
             setRating(0);
             CommentList();
@@ -53,7 +53,7 @@ const Home = () => {
             artresult = await artresult.json();
             setGetComment(artresult);
         } catch (error) {
-            console.error("Error fetching comments:", error);
+            console.error("Error fetching comments:", error, { className: 'toast-custom' });
         }
     };
 
@@ -80,7 +80,7 @@ const Home = () => {
             console.log(artresult);
             setUserart(artresult);
         } catch (error) {
-            console.error("Error fetching articles:", error);
+            console.error("Error fetching articles:", error, { className: 'toast-custom' });
         }
     };
 
@@ -95,14 +95,14 @@ const Home = () => {
             });
             let data = await result.json();
             if (result.ok) {
-                toast.success("Record Deleted Successfully..!!");
+                toast.success("Record Deleted Successfully..!!", { className: 'toast-custom' });
                 ArticleList();
             } else {
-                toast.error("No Record Available Successfully..!!");
+                toast.error("No Record Available Successfully..!!", { className: 'toast-custom' });
             }
         } catch (error) {
-            console.error("Error deleting article:", error);
-            alert("Error deleting article");
+            console.error("Error deleting article:", error, { className: 'toast-custom' });
+            alert("Error deleting article", { className: 'toast-custom' });
         }
     };
 
@@ -113,59 +113,95 @@ const Home = () => {
             });
             let data = await result.json();
             if (result.ok) {
-                toast.success("Rating Deleted Successfully..!!");
+                toast.success("Rating Deleted Successfully..!!", { className: 'toast-custom' });
                 CommentList();
             } else {
-                toast.error("No Record Available Successfully..!!");
+                toast.error("No Record Available Successfully..!!", { className: 'toast-custom' });
             }
         } catch (error) {
-            console.error("Error deleting article:", error);
-            alert("Error deleting article");
+            console.error("Error deleting article:", error, { className: 'toast-custom' });
+            alert("Error deleting article", { className: 'toast-custom' });
         }
     };
 
     return (
-        <div className="container my-5 color-selection">
-            <div className="row justify-content-center  ">
-                {userart.map((ele) => (
-                    <div key={ele._id} className="col-lg-3 col-md-6 card3 col-sm-12 mx-4 my-3">
-                        <div className="product-grid">
-                            <div className="product-content">
-                                <h4>{ele.title}</h4>
-                            </div>
-                            <div>
-                                <img className="winner" src={`https://www.api.jigsawplanet.online/uploads/${ele.file}`} alt={ele.title} />
+        <div className="container my-5">
+            <div className="home-color">
+                <div className="row">
+                    {userart.map((ele) => (
+                        <div key={ele._id} className="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div className="card">
+                                <img
+                                    className="card-img-top"
+                                    src={`https://www.api.jigsawplanet.online/uploads/${ele.file}`}
+                                    alt={ele.title}
+                                />
+                                <div className="card-body">
+                                    <h5 className="card-title">{ele.title}</h5>
+                                    {nextAuth === 'admin' && (
+                                        <button onClick={() => deleteUser(ele._id)} className="btn btn-danger">
+                                            Delete
+                                        </button>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                        {nextAuth === 'admin' && (
-                            <button onClick={() => deleteUser(ele._id)} className="btn btn-dark my-4">Delete</button>
-                        )}
-                    </div>
-                ))}
-            </div>
-            <div className="rating my-4">
-                <textarea value={comment} onChange={(e) => setComment(e.target.value)} className="comment mt-4" type="text" name="summary" placeholder="Write Your Name and Comment Here" />
-                <StarRating rating={rating} setRating={setRating} />
-                <Link><button onClick={handleComment} className="save-comment button button my-3">Save</button></Link>
-            </div>
-            <div className="row justify-content">
-                {getcomment.map((ele) => (
-                    <div key={ele._id}>
-                        <div className="get-comment-section">
-                            <h5>{ele.comment}</h5>
-                            <StarRating rating={ele.rating} readonly={true} />
-                            {nextAuth === 'admin' && (
-                                <button onClick={() => deleteUserRating(ele._id)} className="btn btn-dark my-4">Delete</button>
-                            )}
+                    ))}
+                </div>
+
+                <div className="rating my-4">
+
+                    {/* Comment Box and Save Button */}
+                    <div className="row">
+                        <div className="comment-center">
+                            <textarea
+                                value={comment}
+                                onChange={(e) => setComment(e.target.value)}
+                                className="form-control mt-2" style={{ height: 100}}
+                                type="text"
+                                name="summary"
+                                placeholder="Write Your Name and Comment Here"
+                            />
+                        </div>
+                        <div className="star-rating my-2">
+                            <div className="col-12">
+                                <StarRating rating={rating} setRating={setRating} />
+                            </div>
+                        </div>
+                        <div className="col-12">
+                            <Link>
+                                <button onClick={handleComment} className="btn btn-danger my-2">
+                                    Save
+                                </button>
+                            </Link>
                         </div>
                     </div>
-                ))}
+                </div>
+
+                <div>
+                    {getcomment.map((ele) => (
+                        <div key={ele._id} className="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h6>{ele.comment}</h6>
+                                    <StarRating rating={ele.rating} readonly={true} />
+                                    {nextAuth === 'admin' && (
+                                        <button onClick={() => deleteUserRating(ele._id)} className="btn btn-danger mt-2">
+                                            Delete
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {nextAuth === 'admin' && (
+                    <Link to="/changerule">
+                        <button className="btn btn-danger my-4">Change Rule</button>
+                    </Link>
+                )}
             </div>
-            {nextAuth === 'admin' && (
-                <Link to="/changerule">
-                    <button className="button my-2">Change Rule</button>
-                </Link>
-            )}
         </div>
     );
 };

@@ -16,7 +16,7 @@
 .card2{
     padding-top: 100%; 
     position: relative;
-    background-color: #b8c5c3;
+    background-color: #513131;
     color: white;
     display: flex;
     justify-content: center;
@@ -54,17 +54,12 @@
 .button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #00796b;
+    background-color: #513131;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
-.button:hover {
-    background-color: #004d40;
-}
-
 
 .puzzleimg1{
     background-color: white;
@@ -78,16 +73,7 @@
     font-size: large;
     font-weight: 400;
 }
-.second{
-    border-radius:30px;
-    background-color: #b88080;
-}
-.second:hover{
-    background-color: #6b7e7b;
-}
-
 .img{
-    background: linear-gradient(45deg, #b66e6e, #415b83, #528e54, #3498db);
     border-radius: 30px;
     width:340px;
     height: 400px;
@@ -116,7 +102,6 @@
     font-style: italic;
 }
 .puzzleimg{
-    background-color: white;
     border-radius: 30px;
     height: 150px;
     width: 200px;
@@ -150,7 +135,6 @@
 
 .inner{
     margin-top: 20px;
-    background: linear-gradient(45deg, #a43535, #295ba4, #7dc87f, rgb(57, 52, 219));
     margin-bottom: 30px;
     border-radius: 30px;
 }
@@ -164,7 +148,6 @@
     width: 250px;
 }
 .img2{
-    background: linear-gradient(45deg, #b66e6e, #415b83, #528e54, #3498db);
     border-radius: 30px;
     width:340px;
     height: 480px;

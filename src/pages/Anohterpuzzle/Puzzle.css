@@ -2,25 +2,28 @@
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #513131;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: gray;
+    background-color: #513131;
 }
 
 h1 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    color: white;
 }
 
 .level {
     font-size: 20px;
-    margin: 20px 0;
+    margin: 5px 0;
+    color: white;
 }
 
 .word {
     font-size: 24px;
-    margin: 20px 0;
+    margin: 10px 0;
+    color: white;
 }
 
 input[type="text"] {
@@ -35,12 +38,14 @@ input[type="text"] {
     margin: 10px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #007BFF;
-    color: white;
+    background-color: #f3f3f3;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
 }
-
-.button1:hover {
-    background-color: #0056b3;
+.congrat-color{
+    color: white;
+}
+.current-color{
+    color: white;
 }

@@ -15,7 +15,7 @@ const Footer = () => {
                                 <ul className="list-unstyled text-sm text-white">
                                     <li><span className="opacity-50">Monday-Friday:</span>   24/7</li>
                                 </ul>
-                                <Link to="http://localhost:3000/">SalmanBlogger.com</Link><Link className="social-button shape-circle sb-facebook sb-light-skin" href="#"><i className="socicon-facebook" /></Link><Link className="social-button shape-circle sb-twitter sb-light-skin" to=""><i className="socicon-twitter" /></Link><Link className="social-button shape-circle sb-instagram sb-light-skin" to=""><i className="socicon-instagram" /></Link><Link className="social-button shape-circle sb-google-plus sb-light-skin" to=""><i className="socicon-googleplus" /></Link>
+                                <Link to="https://jigsawplanet.online/">Jigsawplanet</Link><Link className="social-button shape-circle sb-facebook sb-light-skin" href="#"><i className="socicon-facebook" /></Link><Link className="social-button shape-circle sb-twitter sb-light-skin" to=""><i className="socicon-twitter" /></Link><Link className="social-button shape-circle sb-instagram sb-light-skin" to=""><i className="socicon-instagram" /></Link><Link className="social-button shape-circle sb-google-plus sb-light-skin" to=""><i className="socicon-googleplus" /></Link>
                             </section>
                         </div>
                         <div className="col-lg-3 col-md-6">

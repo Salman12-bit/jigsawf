@@ -12,28 +12,28 @@ const Register = () => {
 
   const validateForm = () => {
     if (!name) {
-      toast.error("Name is required");
+      toast.error("Name is required", { className: 'toast-custom' });
       return false;
     }
     if (!email) {
-      toast.error("Email is required");
+      toast.error("Email is required", { className: 'toast-custom' });
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      toast.error("Invalid email format");
+      toast.error("Invalid email format", { className: 'toast-custom' });
       return false;
     }
     if (!address) {
-      toast.error("Address is required");
+      toast.error("Address is required", { className: 'toast-custom' });
       return false;
     }
     if (!password) {
-      toast.error("Password is required");
+      toast.error("Password is required", { className: 'toast-custom' });
       return false;
     }
     if (password.length < 6) {
-      toast.error("Password must be at least 6 characters long");
+      toast.error("Password must be at least 6 characters long", { className: 'toast-custom' });
       return false;
     }
     return true;
@@ -58,7 +58,7 @@ const Register = () => {
     const regdata = await result.json();
 
     if (regdata) {
-      toast.success("User Registered Successfully..!!");
+      toast.success("User Registered Successfully..!!", { className: 'toast-custom' });
       navigate("/");
     }
   };
@@ -149,7 +149,7 @@ const Register = () => {
             </div>
             {/* end card */}
             <p className="text-muted text-center my-4">Already have an account?
-              <Link to="/login" className="text-primary ml-1">Login</Link>
+              <Link to="/login" className="text-danger ml-1">Login</Link>
             </p>
             {/* end row */}
           </div>

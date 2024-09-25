@@ -40,7 +40,7 @@ const Dashboard = () => {
         const data = await response.json();
 
         if (data) {
-            toast.success("User Article Post Successfully..!!")
+            toast.success("User Article Post Successfully..!!", { className: 'toast-custom' })
             navigatetohome("/")
         }
     };

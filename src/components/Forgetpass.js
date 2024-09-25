@@ -15,15 +15,15 @@ const Forgetpass = () => {
 
     const validateForm = () => {
         if (!email) {
-            toast.error("Email is required");
+            toast.error("Email is required", { className: 'toast-custom' });
             return false;
         }
         if (!newpassword) {
-            toast.error("New-Password is required");
+            toast.error("New-Password is required", { className: 'toast-custom' });
             return false;
         }
         if (!confirmpassword) {
-            toast.error("Confirm-Password is required");
+            toast.error("Confirm-Password is required", { className: 'toast-custom' });
             return false;
         }
         return true;
@@ -51,14 +51,14 @@ const Forgetpass = () => {
             const data = await result.json();
 
             if (result.ok) {
-                toast.success("User Password Reset Successfully..!!");
+                toast.success("User Password Reset Successfully..!!", { className: 'toast-custom' });
             } else {
-                toast.error("User Email or Password Don't Match..!!");
+                toast.error("User Email or Password Don't Match..!!", { className: 'toast-custom' });
             }
            
         } catch (error) {
-            console.error("Error during Changing Role:", error);
-            alert("An error occurred. Please try again.");
+            console.error("Error during Changing Role:", error, { className: 'toast-custom' });
+            alert("An error occurred. Please try again.", { className: 'toast-custom' });
         }
         
         

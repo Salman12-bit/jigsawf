@@ -26,13 +26,13 @@ const Changerule = () => {
             const data = await result.json();
 
             if (result.ok) {
-                toast.success("User Role Reset Successfully..!!");
+                toast.success("User Role Reset Successfully..!!", { className: 'toast-custom' } );
             } else {
-                toast.error("User Email or Role do not match..!!");
+                toast.error("User Email or Role do not match..!!", { className: 'toast-custom' });
             }
         } catch (error) {
-            console.error("Error during Changing Role:", error);
-            alert("An error occurred. Please try again.");
+            console.error("Error during Changing Role:", error , { className: 'toast-custom' });
+            alert("An error occurred. Please try again.", { className: 'toast-custom' });
         }
     }
 

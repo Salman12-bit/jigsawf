@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <> 
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Jigsaw Planet</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <Link className="nav-link active" to="/puzzle1">Puzzle Game</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/puzzle">Word Puzzle</Link>
+                <Link className="nav-link active" to="/word-puzzle">Word Puzzle</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/free">Gaming Theme</Link>
@@ -52,12 +52,12 @@ const Navbar = () => {
               {
                 auth ?
 
-                  <button onClick={logout} className="btn btn-dark" type="submit">Logout</button>
+                  <button onClick={logout} className="btn btn-danger" type="submit">Logout</button>
 
                   :
                   <>
-                    <Link to="/login" className="btn btn-dark" type="submit">Login</Link>
-                    <Link to="/register" className="btn btn-dark mx-2" type="submit">Register</Link>
+                    <Link to="/login" className="btn btn-danger" type="submit">Login</Link>
+                    <Link to="/register" className="btn btn-danger mx-2" type="submit">Register</Link>
                   </>
               }
 

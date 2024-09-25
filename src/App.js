@@ -17,13 +17,13 @@ import Puzzle2 from './pages/Puzzlepage/Puzzle2';
 import Puzzle3 from './pages/Puzzlepage/Puzzle3';
 import Chnagerule from './components/Changerule';
 import Dashboard from './pages/dashboard/Dashboard';
-import Puzzle from './pages/Anohterpuzzle/Puzzle';
-
-
+import Wordpuzzle from './pages/Anohterpuzzle/Wordpuzzle';
+import Wordpuzzle1 from './pages/Anohterpuzzle/Wordpuzzle1';
+import Wordpuzzle2 from './pages/Anohterpuzzle/Wordpuzzle2';
+import Wordpuzzle3 from './pages/Anohterpuzzle/Wordpuzzle3';
+import Wordpuzzle4 from './pages/Anohterpuzzle/Wordpuzzle4';
 
 function App() {
-  
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -39,8 +39,11 @@ function App() {
             <Route path='puzzle1' element={<Puzzle1 />} />
             <Route path='puzzle2' element={<Puzzle2 />} />
             <Route path='puzzle3' element={<Puzzle3 />} />
-            <Route path='puzzle' element={<Puzzle/>} />
-
+            <Route path='word-puzzle' element={<Wordpuzzle />} />
+            <Route path='word-puzzle1' element={<Wordpuzzle1/>} />
+            <Route path='word-puzzle2' element={<Wordpuzzle2/>} />
+            <Route path='word-puzzle3' element={<Wordpuzzle3/>} />
+            <Route path='word-puzzle4' element={<Wordpuzzle4/>} />
           </Route>
           <Route path='forget' element={<Forgetpass />} />
           <Route path='login' element={<Login />} />
